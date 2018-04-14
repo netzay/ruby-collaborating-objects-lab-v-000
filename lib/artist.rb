@@ -22,8 +22,8 @@ class Artist
   end
  
   def self.create_by_name(name)
-    artist = self.new
-    artist.name = name
+    artist = self.new(name)
+    artist.save
     artist
   end
 
@@ -34,7 +34,6 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    binding.pry 
     if find_by_name(name) 
       return find_by_name(name)
     else
