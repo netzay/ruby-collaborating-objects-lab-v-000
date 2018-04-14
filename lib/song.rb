@@ -4,8 +4,9 @@ class Song
   def initialize(name)
     @name = name 
     @file_name = file_name
-    puts @name
-  end
+    @title = title
+    puts @title
+end
 
   def self.new_by_filename(filename)
     song = self.new(filename)
